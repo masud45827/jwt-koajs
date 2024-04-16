@@ -31,7 +31,7 @@ router.post("/signup", async (ctx) => {
   const newUser = new Model({ username, password: hashPassword });
   const res = await newUser.save();
   console.log(res);
-  ctx.status = 201; // Created
+  ctx.status = 201; 
   ctx.body = res;
 });
 
